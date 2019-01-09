@@ -20,7 +20,7 @@ public class ZookeeperDemo {
     private static CountDownLatch latch = new CountDownLatch(1);
     public static void main(String[] args) {
         try {
-            ZooKeeper zooKeeper = new ZooKeeper("192.168.131.134:2181", 3000,new MyWatcher(latch));
+            ZooKeeper zooKeeper = new ZooKeeper("127.0.0.1:2181", 3000,new MyWatcher(latch));
             latch.await();
 
 //            String path1 = zooKeeper.create("/zk-test-e-",          //path
